@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.header-bg {
+  background: #000;
+}
+
+.header {
+  display: flex; /* coloca um item do lado do outro. display gred ou flex */
+  flex-wrap: wrap; /* defini a quebra do menu para baixo*/
+  gap: 20px;
+  justify-content: space-between; /* separa os itens para as extremidades */
+  align-items: center;
+  box-sizing: border-box; /* impede que some o valor de padding com o "max-width" */
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto; /* alinhar ao centro margin: left e right "auto"  */
+  margin-right: auto;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* separar os links */
+}
+
+.header-menu a {
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  padding: 16px 0; /* aumentar a área de contato dos links */
+  position: relative;
+}
+
+.header-menu a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header-menu a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .header-menu {
+    gap: 20px;
+  }
+  .header-menu a {
+    background: #111;
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+  .header-menu a:hover {
+    background-color: #2e2e2e;
+  }
+  .header a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px;
+  }
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+.introducao-bg {
+  background: #000;
+  color: #fff;
+}
+
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.introducao-conteudo {
+  align-self: end;
+  ]padding-bottom: 80px;
+}
+
+.introducao h1 {
+  margin-bottom: 32px;
+  font-size: 64px;
+  line-height: 1.125;
+}
+
+.introducao p {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #b2b2b2;
+}
